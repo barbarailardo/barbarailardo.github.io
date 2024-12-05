@@ -1,0 +1,80 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #f7d2e0;
+    color: #444;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 4px solid #f292b7;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #f292b7;
+    border-bottom: 2px solid #f7d2e0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Services Section */
+.service-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    margin-bottom: 0.5rem;
+}
+
+.service-card .price {
+    font-weight: bold;
+    color: #f292b7;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #f292b7;
+    color: white;
+}
