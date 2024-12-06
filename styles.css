@@ -6,118 +6,195 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #2c2f33; /* Discord dark theme background */
-    color: #ffffff;
-    padding: 0 2rem; /* Horizontal padding */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center all elements */
-    text-align: center; /* Center-align text */
-}
+    font-family: 'Fraunces', Helvetica, Arial, sans-serif;
+    letter-spacing: 1px; /* Adjust the value as needed */
+    line-height: 1.8;
+    font-size: 1.4rem;
 
-/* Apply max-width to all div elements */
-div {
-    max-width: 900px;
-    width: 100%; /* Ensure it takes up full width up to max-width */
+    background-color: #2c2f33;
+    color: #d1cdcd;
+    padding: 2rem;
 }
 
 /* Header */
 header {
-    background-color: #7289da; /* Discord blue */
+    background-color: #382585;
     padding: 2rem 0;
-    border-bottom: 5px solid #99aab5; /* Lighter blue-gray accent */
-    width: 100%; /* Center header */
-    text-align: center; /* Center header content */
+    text-align: center;
+    border-bottom: 5px solid #99aab5;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #e8e4e4;
+    line-height: 0.8;
+    margin-top: 20px;
+
 }
 
 header p {
     font-size: 1.2rem;
-    color: #d4d7dc; /* Lighter gray text */
+    color: #d4d7dc;
 }
 
-/* Sections */
-section {
-    padding: 2rem 0;
-    border-bottom: 1px solid #42454a; /* Subtle divider */
-    width: 100%; /* Center section */
-    text-align: center; /* Center section text */
+/* About Section */
+#about {
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
-/* General h2 styling for all sections */
-section h2 {
+h2 {
+    font-family: 'Space Mono', Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px; /* Adjust the value as needed */
+    line-height: 1.8;
     font-size: 2rem;
-    color: #99aab5; /* Light blue-gray */
-    margin-bottom: 1rem; /* Space between title and content */
+    color: #8364ff;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    
 }
 
-/* About content wrapper */
+.subtitle {
+    font-size: 26px; /* Adjust the size as needed */
+    font-weight: 300; /* Optional: makes the subtitle bold */
+    color: #37d54c; /* Adjust the color to your preference */
+    text-align: center; /* Center-aligns the subtitle */
+    margin: 10px 0; /* Adds space around the subtitle */
+}
+
 .about-content {
-    max-width: 900px; /* Match the max-width of the service cards */
-    width: 100%; /* Ensure it takes up full width up to max-width */
-    margin: 0 auto; /* Center-align the content */
-    padding: 0 2rem; /* Add horizontal padding for consistency */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-/* Center the "Services" title */
-#services h2 {
-    font-size: 2rem;
-    color: #99aab5; /* Light blue-gray */
-    margin-bottom: 1rem; /* Space between title and cards */
-}
-
-/* Center the service cards with dynamic alignment */
+/* Services Section */
 #services {
-    width: 100%; /* Full width to align with the container */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center all service cards */
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Ensures a maximum of 50px horizontal spacing */
+}
+
+/* Service Cards */
 .service-card {
-    max-width: 900px; /* Set a maximum width */
-    width: 100%; /* Take full width up to the max */
-    margin: 1rem 0; /* Space between service cards */
-    padding: 1rem;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    text-align: center; /* Center content within each card */
-    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover */
-    background-color: #42454a; /* Slightly lighter background */
+    background-color: #42454a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .service-card:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .service-card h3 {
+    font-size: 2rem;
+    color: #fdf4f4;
+    margin-bottom: 1rem;
+}
+
+.price-value {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
     color: #ffffff;
-    margin-bottom: 0.5rem;
 }
 
-.service-card .price {
+.price-value .currency {
     font-size: 1.2rem;
-    color: #7289da; /* Discord blue */
+}
+
+.price-value .amount {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.service-content {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.service-content li {
+    color: #d4d7dc;
+    margin-bottom: 10px;
+}
+
+.service-signup {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8364ff;
+    color: #fff;
+    text-decoration: none;
     font-weight: bold;
+    border-radius: 7px;
+    transition: background-color 0.4s;
 }
 
-/* Footer */
-footer {
-    background-color: #23272a; /* Even darker background */
-    padding: 1rem 0;
-    width: 100%; /* Center footer */
-    text-align: center; /* Center footer content */
+.service-card .pricingTable-signup {
+    display: block;
+    margin: 10px auto; /* Center-aligns and spaces out buttons */
+    padding: 10px 30px;
+    background: #1daa72;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    transition: all .7s ease 0s;
+    text-align: center; /* Ensures button text is centered */
 }
 
-footer p {
-    font-size: 0.9rem;
-    color: #99aab5;
+/* Ensures all buttons in the service section are vertically aligned */
+.service-cards-container {
+    display: flex;
+    flex-direction: column; /* Aligns items in a vertical column */
+    align-items: center; /* Centers items horizontally */
+    gap: 20px; /* Adds space between buttons */
+}
+
+.service-signup:hover {
+    background-color: #148e5f;
+}
+
+/* Enhanced Colors for Service Cards */
+.service-card.pink {
+    background-color: #f06ace;
+}
+
+.service-card.pink .price-value,
+.service-card.pink h3,
+.service-card.pink .service-signup {
+    color: #fff;
+}
+
+.service-card.blue {
+    background-color: #49b0ca;
+}
+
+.service-card.blue .price-value,
+.service-card.blue h3,
+.service-card.blue .service-signup {
+    color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .service-card {
+        width: 90%;
+        margin: 1rem auto;
+    }
 }
