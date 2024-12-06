@@ -10,23 +10,26 @@ body {
     line-height: 1.6;
     background-color: #2c2f33; /* Discord dark theme background */
     color: #ffffff;
-    margin: 0;
-    padding: 0;
+    padding: 0 2rem; /* Horizontal padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all elements */
+    text-align: center; /* Center-align text */
 }
 
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Apply max-width to all div elements */
+div {
+    max-width: 900px;
+    width: 100%; /* Ensure it takes up full width up to max-width */
 }
 
 /* Header */
 header {
     background-color: #7289da; /* Discord blue */
     padding: 2rem 0;
-    text-align: center;
     border-bottom: 5px solid #99aab5; /* Lighter blue-gray accent */
+    width: 100%; /* Center header */
+    text-align: center; /* Center header content */
 }
 
 header h1 {
@@ -44,33 +47,55 @@ header p {
 section {
     padding: 2rem 0;
     border-bottom: 1px solid #42454a; /* Subtle divider */
+    width: 100%; /* Center section */
+    text-align: center; /* Center section text */
 }
 
+/* General h2 styling for all sections */
 section h2 {
     font-size: 2rem;
     color: #99aab5; /* Light blue-gray */
-    margin-bottom: 1rem;
-    text-align: center;
+    margin-bottom: 1rem; /* Space between title and content */
 }
 
-section p {
-    color: #d4d7dc;
-    font-size: 1rem;
+/* About content wrapper */
+.about-content {
+    max-width: 900px; /* Match the max-width of the service cards */
+    width: 100%; /* Ensure it takes up full width up to max-width */
+    margin: 0 auto; /* Center-align the content */
+    padding: 0 2rem; /* Add horizontal padding for consistency */
 }
 
-/* Service Cards */
+/* Center the "Services" title */
+#services h2 {
+    font-size: 2rem;
+    color: #99aab5; /* Light blue-gray */
+    margin-bottom: 1rem; /* Space between title and cards */
+}
+
+/* Center the service cards with dynamic alignment */
+#services {
+    width: 100%; /* Full width to align with the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all service cards */
+}
+
 .service-card {
-    background-color: #42454a; /* Slightly lighter background */
+    max-width: 900px; /* Set a maximum width */
+    width: 100%; /* Take full width up to the max */
+    margin: 1rem 0; /* Space between service cards */
     padding: 1rem;
-    margin: 1rem 0;
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center; /* Center content within each card */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover */
+    background-color: #42454a; /* Slightly lighter background */
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Lift effect */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .service-card h3 {
@@ -88,7 +113,8 @@ section p {
 footer {
     background-color: #23272a; /* Even darker background */
     padding: 1rem 0;
-    text-align: center;
+    width: 100%; /* Center footer */
+    text-align: center; /* Center footer content */
 }
 
 footer p {
