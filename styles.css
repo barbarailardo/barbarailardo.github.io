@@ -30,7 +30,6 @@ header h1 {
     color: #e8e4e4;
     line-height: 0.8;
     margin-top: 20px;
-
 }
 
 header p {
@@ -44,6 +43,32 @@ header p {
     text-align: center;
 }
 
+.about-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 h2 {
     font-family: 'Space Mono', Helvetica, Arial, sans-serif;
     font-weight: bolder;
@@ -52,8 +77,7 @@ h2 {
     font-size: 2rem;
     color: #8364ff;
     margin-bottom: 2rem;
-    margin-top: 2rem;
-    
+    margin-top: 4rem;
 }
 
 .subtitle {
@@ -75,7 +99,6 @@ h2 {
     text-align: center;
     margin-bottom: 3rem;
 }
-
 
 .services-container {
     display: flex;
@@ -110,11 +133,12 @@ h2 {
 .price-value {
     margin-bottom: 20px;
     font-size: 1.5rem;
+    font-weight: 900;
     color: #ffffff;
 }
 
 .price-value .currency {
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .price-value .amount {
@@ -144,28 +168,6 @@ h2 {
     transition: background-color 0.4s;
 }
 
-.service-card .pricingTable-signup {
-    display: block;
-    margin: 10px auto; /* Center-aligns and spaces out buttons */
-    padding: 10px 30px;
-    background: #1daa72;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
-    overflow: hidden;
-    position: relative;
-    transition: all .7s ease 0s;
-    text-align: center; /* Ensures button text is centered */
-}
-
-/* Ensures all buttons in the service section are vertically aligned */
-.service-cards-container {
-    display: flex;
-    flex-direction: column; /* Aligns items in a vertical column */
-    align-items: center; /* Centers items horizontally */
-    gap: 20px; /* Adds space between buttons */
-}
-
 .service-signup:hover {
     background-color: #148e5f;
 }
@@ -190,6 +192,27 @@ h2 {
 .service-card.blue .service-signup {
     color: #ffffff;
 }
+
+/* Footer */
+footer {
+    background-color: #382585; /* Darker grey than the page background */
+    padding: 1.5rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures proper centering */
+    text-align: center;
+}
+
+footer p {
+    color: #d1cdcd; /* Keeps the text color consistent with the page theme */
+    font-size: 1.2rem;
+    margin: 0;
+}
+
 
 /* Responsive Adjustments */
 @media only screen and (max-width: 768px) {
