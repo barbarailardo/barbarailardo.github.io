@@ -14,6 +14,16 @@ body {
     background-color: #2c2f33;
     color: #d1cdcd;
     padding: 2rem;
+    background-image: url('assets/images/women_in_tech1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    width: 100%; /* Full width */
+    background-color: #2c2f33; /* Dark grey */
 }
 
 /* Header */
@@ -37,10 +47,19 @@ header p {
     color: #d4d7dc;
 }
 
+/* Placeholder for background image offset */
+.placeholder {
+    height: 380px; /* Matches the visible part of the background image */
+    background-color: transparent; /* No color */
+}
+
 /* About Section */
 #about {
-    margin-bottom: 3rem;
+    background-color: #2c2f33; /* Matches the overall page background color */
     text-align: center;
+    padding-top: 20px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 .about-flex-container {
@@ -55,18 +74,7 @@ header p {
 
 .about-content {
     flex: 1;
-}
-
-.about-image {
-    flex: 1;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.about-image img {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #2c2f33; /* Ensures background color matches the page */
 }
 
 h2 {
@@ -88,16 +96,11 @@ h2 {
     margin: 10px 0; /* Adds space around the subtitle */
 }
 
-.about-content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
 /* Services Section */
 #services {
     text-align: center;
     margin-bottom: 3rem;
+    padding-bottom: 80px;
 }
 
 .services-container {
@@ -203,7 +206,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Ensures proper centering */
+    height: 40px;
     text-align: center;
 }
 
@@ -212,7 +215,6 @@ footer p {
     font-size: 1.2rem;
     margin: 0;
 }
-
 
 /* Responsive Adjustments */
 @media only screen and (max-width: 768px) {
