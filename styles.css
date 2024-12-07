@@ -10,7 +10,6 @@ body {
     letter-spacing: 1px; /* Adjust the value as needed */
     line-height: 1.8;
     font-size: 1.4rem;
-
     background-color: #2c2f33;
     color: #d1cdcd;
     padding: 2rem;
@@ -28,18 +27,30 @@ body {
 
 /* Header */
 header {
-    background-color: #382585;
-    padding: 2rem 0;
     text-align: center;
-    border-bottom: 5px solid #99aab5;
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other elements */
+    
+    /* Transparent background for the blur effect */
+    background-color: rgba(56, 37, 133, 0.5); /* Adjust opacity as needed */
+    
+    /* Dynamic blur effect */
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional for styling */
 }
 
 header h1 {
     font-size: 4rem;
     font-weight: bold;
-    color: #e8e4e4;
-    line-height: 0.8;
+    color: #f0eeee;
     margin-top: 20px;
+    line-height: 1;
 }
 
 header p {
@@ -47,9 +58,10 @@ header p {
     color: #d4d7dc;
 }
 
+
 /* Placeholder for background image offset */
 .placeholder {
-    height: 380px; /* Matches the visible part of the background image */
+    height: 1000px; /* Matches the visible part of the background image */
     background-color: transparent; /* No color */
 }
 
@@ -77,6 +89,7 @@ header p {
     background-color: #2c2f33; /* Ensures background color matches the page */
 }
 
+/* Headings */
 h2 {
     font-family: 'Space Mono', Helvetica, Arial, sans-serif;
     font-weight: bolder;
@@ -88,10 +101,11 @@ h2 {
     margin-top: 4rem;
 }
 
+/* Subtitle */
 .subtitle {
     font-size: 26px; /* Adjust the size as needed */
     font-weight: 300; /* Optional: makes the subtitle bold */
-    color: #37d54c; /* Adjust the color to your preference */
+    color: #ffffff; /* Adjust the color to your preference */
     text-align: center; /* Center-aligns the subtitle */
     margin: 10px 0; /* Adds space around the subtitle */
 }
@@ -198,8 +212,14 @@ h2 {
 
 /* Footer */
 footer {
-    background-color: #382585; /* Darker grey than the page background */
     padding: 1.5rem 0;
+    /* Transparent background for the blur effect */
+    background-color: rgba(56, 37, 133, 0.5); /* Adjust opacity as needed */
+
+    /* Dynamic blur effect */
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    
 }
 
 .footer-container {
