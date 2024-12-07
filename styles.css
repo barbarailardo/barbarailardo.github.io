@@ -12,7 +12,7 @@ body {
     font-size: 1.4rem;
     background-color: #2c2f33;
     color: #d1cdcd;
-    padding: 2rem;
+    padding: 3rem;
     background-image: url('assets/images/women_in_tech1.jpg');
     background-size: cover;
     background-position: center;
@@ -58,20 +58,25 @@ header p {
     color: #d4d7dc;
 }
 
+main > div {
+    border-radius: 8px; /* Slight rounding of corners */
+    background-color: #333538; /* Example background color */
+    padding: 20px;
+    overflow: hidden; /* Ensures the rounded corners work properly */
+}
 
 /* Placeholder for background image offset */
 .placeholder {
-    height: 1000px; /* Matches the visible part of the background image */
+    height: 800px; /* Matches the visible part of the background image */
     background-color: transparent; /* No color */
 }
 
 /* About Section */
 #about {
-    background-color: #2c2f33; /* Matches the overall page background color */
+    background-color: transparent; /* Matches the overall page background color */
+    border-radius: 10px;
     text-align: center;
-    padding-top: 20px;
     margin-bottom: 3rem;
-    margin-top: 3rem;
 }
 
 .about-flex-container {
@@ -86,19 +91,25 @@ header p {
 
 .about-content {
     flex: 1;
-    background-color: #2c2f33; /* Ensures background color matches the page */
+    background-color: transparent; /* Ensures background color matches the page */
 }
+
+/* Placeholder Section */
+#placeholder-section {
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 
 /* Headings */
 h2 {
     font-family: 'Space Mono', Helvetica, Arial, sans-serif;
     font-weight: bolder;
     letter-spacing: 1px; /* Adjust the value as needed */
-    line-height: 1.8;
-    font-size: 2rem;
+    line-height: 1.5;
+    font-size: 3rem;
     color: #8364ff;
-    margin-bottom: 2rem;
-    margin-top: 4rem;
 }
 
 /* Subtitle */
@@ -120,6 +131,7 @@ h2 {
 .services-container {
     display: flex;
     justify-content: center;
+    padding-top: 60px;
     flex-wrap: wrap;
     gap: 50px; /* Ensures a maximum of 50px horizontal spacing */
 }
@@ -154,13 +166,15 @@ h2 {
     color: #ffffff;
 }
 
-.price-value .currency {
-    font-size: 2rem;
+.price-value .from {
+    font-size: 1.5rem;
+    font-weight: 50;
+    line-height: 0.6;
 }
 
 .price-value .amount {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .service-content {
@@ -197,7 +211,7 @@ h2 {
 .service-card.pink .price-value,
 .service-card.pink h3,
 .service-card.pink .service-signup {
-    color: #fff;
+    color: #ffffff;
 }
 
 .service-card.blue {
@@ -207,6 +221,16 @@ h2 {
 .service-card.blue .price-value,
 .service-card.blue h3,
 .service-card.blue .service-signup {
+    color: #ffffff;
+}
+
+.service-card.orange {
+    background-color: #f7873a;
+}
+
+.service-card.orange .price-value,
+.service-card.orange h3,
+.service-card.orange .service-signup {
     color: #ffffff;
 }
 
