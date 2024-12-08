@@ -34,10 +34,13 @@ body {
         font-size: 0.9rem; /* Adjust header size for mobile */
     }
 
-
     .service-card {
-        width: 90%; /* Adjust service card size */
-        margin: 1rem auto;
+        width: calc(100% - 40px); /* Reduce card width for small screens */
+        margin: 20px auto; /* Add spacing between cards */
+    }
+    .services-container {
+        padding-top: 20px; /* Adjust top padding for a cleaner look */
+        gap: 30px; /* Adjust gap between rows */
     }
 
     /* Add more mobile-specific styles as needed */
@@ -95,7 +98,7 @@ main > .blurred-content {
     border-radius: 12px; /* Slight rounding of corners */
     background-color: rgba(44, 45, 48, 0.8); /* Example background color */
     padding: 20px;
-    overflow: hidden; 
+    box-sizing: border-box;
     backdrop-filter: saturate(180%) blur(50px);
     -webkit-backdrop-filter: saturate(180%) blur(50px);
     border: 1.5px solid rgba(255, 255, 255, 0.2); /* Optional for styling */
@@ -182,8 +185,10 @@ h2 {
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 80px;
+    height: auto;
      /* Ensure the section grows based on content */
-     display: block; /* Removed fixed height */
+    display: block; /* Removed fixed height */
+    overflow: visible;
 }
 
 .services-container {
@@ -191,7 +196,11 @@ h2 {
     justify-content: center;
     padding-top: 60px;
     flex-wrap: wrap;
-    gap: 50px; /* Ensures a maximum of 50px horizontal spacing */
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px; /* Ensures a maximum of 50px horizontal spacing */
+    overflow: visible;
+
 }
 
 /* Service Cards */
@@ -212,6 +221,9 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 20px;
     width: 300px;
+    min-width: 280px; /* Prevent shrinking below this size */
+    max-width: 90%; /* Ensure it doesn’t exceed container width */
+    margin: 20px 0;
     height: 700px;
     text-align: center;
     position: relative;
@@ -339,10 +351,3 @@ footer p {
     margin: 0;
 }
 
-/* Responsive Adjustments */
-@media only screen and (max-width: 768px) {
-    .service-card {
-        width: 90%;
-        margin: 1rem auto;
-    }
-}

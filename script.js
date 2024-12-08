@@ -8,12 +8,17 @@ console.log("marginAmount is: ", marginAmount);
 
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section");
+    const servicesSection = document.querySelector("#services"); // Select the services section specifically
 
     // Function to adjust section heights
     const setSectionHeights = () => {
         const viewportHeight = window.innerHeight;
         sections.forEach(section => {
-            section.style.height = `${viewportHeight}px`;
+            if (section === servicesSection || section.querySelector('.blurred-content')) {
+                section.style.height = "auto"; // Let height adjust to content
+            } else {
+                section.style.height = `${viewportHeight}px`; // Set to viewport height
+            }
         });
     };
 
