@@ -10,7 +10,7 @@ body {
     letter-spacing: 1px; /* Adjust the value as needed */
     line-height: 1.8;
     font-size: 1.4rem;
-    background-color: #2c2f33;
+    /* background-color: #2c2f33; */
     color: #d1cdcd;
     padding: 3rem;
     background-image: url('assets/images/women_in_tech1.jpg');
@@ -22,7 +22,7 @@ body {
 /* Content Wrapper */
 .content-wrapper {
     width: 100%; /* Full width */
-    background-color: #2c2f33; /* Dark grey */
+   /*  background-color: #2c2f33; */ /* Dark grey */
 }
 
 /* Header */
@@ -58,11 +58,14 @@ header p {
     color: #d4d7dc;
 }
 
-main > div {
-    border-radius: 8px; /* Slight rounding of corners */
-    background-color: #333538; /* Example background color */
+main > .blurred-content {
+    border-radius: 12px; /* Slight rounding of corners */
+    background-color: rgba(44, 45, 48, 0.8); /* Example background color */
     padding: 20px;
-    overflow: hidden; /* Ensures the rounded corners work properly */
+    overflow: hidden; 
+    backdrop-filter: saturate(180%) blur(50px);
+    -webkit-backdrop-filter: saturate(180%) blur(50px);
+    border: 1.5px solid rgba(255, 255, 255, 0.2); /* Optional for styling */
 }
 
 section {
@@ -256,7 +259,9 @@ h2 {
 
 /* Footer */
 footer {
-    padding: 1.5rem 0;
+    border-radius: 12px;
+    margin-top: 40px;
+    padding: 1rem 0;
     /* Transparent background for the blur effect */
     background-color: rgba(56, 37, 133, 0.5); /* Adjust opacity as needed */
 
