@@ -65,6 +65,23 @@ main > div {
     overflow: hidden; /* Ensures the rounded corners work properly */
 }
 
+section {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100vh;
+   /*  align-items: center; */ /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    overflow: hidden; /* Prevent scrollbars if content exceeds height */
+}
+
+section h2 {
+    margin: 0; /* Remove default margins */
+    padding-bottom: 10px; /* Add some spacing below the title */
+    line-height: 1.2; /* Adjust line spacing to make the title more compact */
+}
+
+
 /* Placeholder for background image offset */
 .placeholder {
     height: 800px; /* Matches the visible part of the background image */
@@ -80,13 +97,13 @@ main > div {
 }
 
 .about-flex-container {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    margin-top: 0;
 }
 
 .about-content {
