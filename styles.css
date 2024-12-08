@@ -19,6 +19,31 @@ body {
     background-attachment: fixed;
 }
 
+/* Mobile-specific styles */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 1.1rem; /* Smaller font size for mobile */
+        padding: 2rem; /* Adjust padding for mobile */
+    }
+
+    header .title {
+        font-size: 2rem; /* Adjust header size for mobile */
+    }
+
+    header .subtitle {
+        font-size: 0.9rem; /* Adjust header size for mobile */
+    }
+
+
+    .service-card {
+        width: 90%; /* Adjust service card size */
+        margin: 1rem auto;
+    }
+
+    /* Add more mobile-specific styles as needed */
+}
+
+
 /* Content Wrapper */
 .content-wrapper {
     width: 100%; /* Full width */
@@ -45,13 +70,21 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional for styling */
 }
 
-header h1 {
+.title {
     font-size: 4rem;
     font-weight: bold;
     color: #f0eeee;
     margin-top: 20px;
     line-height: 1;
 }
+/* 
+header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f0eeee;
+    margin-top: 20px;
+    line-height: 1;
+} */
 
 header p {
     font-size: 1.2rem;

@@ -1,6 +1,10 @@
 // Placeholder for future interactivity
 console.log("Welcome to ADHDologia!");
 
+// Device detection variable
+const isMobile = window.innerWidth <= 768;
+const marginAmount = isMobile ? 0 : 200;
+console.log("marginAmount is: ", marginAmount);
 
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section");
@@ -20,12 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", setSectionHeights);
 });
 
-
+// Function to handle scroll-based blur effect for "about-content"
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section .about-content");
-
     const handleScroll = () => {
-        const viewportHeight = window.innerHeight - 200;
+
+        const viewportHeight = window.innerHeight - marginAmount;
 
         sections.forEach(content => {
             const rect = content.getBoundingClientRect();
@@ -55,3 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     handleScroll();
 });
 
+// Apply mobile-specific background translation if ismobile is true
+if (isMobile) {
+    document.querySelector('body').style.backgroundPosition = '-300px center';
+}
