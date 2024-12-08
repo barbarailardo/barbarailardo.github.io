@@ -70,6 +70,7 @@ section {
     place-items: center;
     text-align: center;
     height: 100vh;
+    position: relative;
    /*  align-items: center; */ /* Center content vertically */
     justify-content: center; /* Center content horizontally */
     overflow: hidden; /* Prevent scrollbars if content exceeds height */
@@ -108,6 +109,8 @@ section h2 {
 
 .about-content {
     flex: 1;
+    filter: blur(10px);
+    transition: filter 0.5s ease-out;
     background-color: transparent; /* Ensures background color matches the page */
 }
 
