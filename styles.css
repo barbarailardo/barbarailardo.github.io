@@ -182,6 +182,8 @@ h2 {
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 80px;
+     /* Ensure the section grows based on content */
+     display: block; /* Removed fixed height */
 }
 
 .services-container {
@@ -193,7 +195,7 @@ h2 {
 }
 
 /* Service Cards */
-.service-card {
+/* .service-card {
     background-color: #42454a;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -202,6 +204,21 @@ h2 {
     text-align: center;
     position: relative;
     transition: transform 0.2s, box-shadow 0.2s;
+} */
+
+.service-card {
+    background-color: #42454a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    height: 700px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column; /* Allow stacking */
+    justify-content: space-between; /* Ensure space is distributed */
 }
 
 .service-card:hover {
@@ -245,7 +262,11 @@ h2 {
 }
 
 .service-signup {
-    display: inline-block;
+    position: relative; /* Position the button absolutely */
+    bottom: 30px; /* Distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    margin-top: 40px;
     padding: 10px 20px;
     background-color: #8364ff;
     color: #fff;
