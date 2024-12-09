@@ -121,10 +121,27 @@ section {
     place-items: center ;
     text-align: center;
     /* height: 100vh; */
-    /* height: auto; */
+    height: auto;
     position: relative;
     justify-content: center; /* Center content horizontally */
     overflow: hidden; /* Prevent scrollbars if content exceeds height */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 0;
+    position: relative;
+    overflow: visible;
+    height: auto;  
+    filter: blur(20px);
+    transition: filter 0.5s ease;
 }
 
 section h2 {
@@ -139,42 +156,38 @@ section h2 {
     background-color: transparent; /* Matches the overall page background color */
     text-align: center;
     /* margin-bottom: 3rem; */
-    margin: 0 0 0 0;
+    margin: 2rem 0 4rem 0;
+    padding: 2rem 0 0 0; 
     overflow: visible;
     position: relative;
+
+    @media only screen and (max-width: 768px) {
+        margin: 0 0 3rem 0;
+        padding: 0 0 100px 0; 
+    }
 }
 
 
-.about-flex-container {
-    /* justify-content: space-between; */
-    align-items: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    margin-top: 0;
-    position: fixed;
-}
 
 .about-content {
-    flex: 1;
-    filter: blur(10px);
-    transition: filter 0.5s ease-out;
-    background-color: transparent; /* Ensures background color matches the page */
+    flex: 1; /* Allow content to take available space */
+    height: auto;
+    background-color: transparent;
     position: relative;
+    padding: 0 0 150px 0;
 }
 
 .about-content > div {
     background-color: transparent;
-    height: 80px;
+    height: 150px;
     @media screen and (max-width: 768px) {
-        height: 180px; /* Slightly smaller for mobile */
+        height: 130px; /* Slightly smaller for mobile */
     }
 }
 
 .about-content img {
     position: absolute; /* Ensure the image stays fixed */
-    top: -80%; /* Center vertically */
+    top: -20%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust for true centering */
     max-width: 100%;
@@ -185,19 +198,10 @@ section h2 {
 /* Adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
     .about-content img {
-        top: -70%; /* Adjusts for mobile screens */
+        top: -50%; /* Adjusts for mobile screens */
         left: 50%; /* Centers the image */
         transform: translateX(-50%); /* Centers the image */
     }
-}
-
-
-
-/* Placeholder Section */
-#placeholder-section {
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 3rem;
 }
 
 

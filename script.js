@@ -6,7 +6,7 @@ const isMobile = window.innerWidth <= 768;
 const marginAmount = isMobile ? 0 : 200;
 console.log("marginAmount is: ", marginAmount);
 
-document.addEventListener("DOMContentLoaded", () => {
+/* document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section");
     const servicesSection = document.querySelector("#services"); // Select the services section specifically
 
@@ -28,15 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // Adjust section heights on window resize
     window.addEventListener("resize", setSectionHeights);
 });
-
+ */
 // Function to handle scroll-based blur effect for "about-content"
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section .about-content");
+    /* const sections = document.querySelectorAll("section .about-content"); */
+    const flexContainers = document.querySelectorAll("section .flex-container");
     const handleScroll = () => {
 
         const viewportHeight = window.innerHeight - marginAmount;
 
-        sections.forEach(content => {
+        flexContainers.forEach(content => {
             const rect = content.getBoundingClientRect();
 
             // Calculate how much of the element is visible
