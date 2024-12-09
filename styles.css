@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces&display=swap');
+
 /* General Reset */
 * {
     margin: 0;
@@ -5,18 +8,56 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Fraunces', Helvetica, Arial, sans-serif;
     letter-spacing: 1px; /* Adjust the value as needed */
     line-height: 1.8;
     font-size: 1.4rem;
-    /* background-color: #2c2f33; */
+    background-color: #2c2f33;
     color: #d1cdcd;
     padding: 3rem;
     background-image: url('assets/images/ADHDologia_stage_by_Kamil_Nawirski.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+
+
+#main-content {
+    display: block;
+}
+
+#mobile-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #444;
+    padding: 20px;
+    margin-top: 10rem;
+    text-align: center;
+    
+    color: white;
+    /* Transparent background for the blur effect */
+    background-color: rgba(46, 46, 46, 0.7); /* Adjust opacity as needed */
+
+    /* Dynamic blur effect */
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+
+    padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    #main-content {
+        display: none;
+    }
+    #mobile-message {
+        display: block;
+    }
 }
 
 /* Mobile-specific styles */
@@ -105,12 +146,18 @@ header p {
     color: #d4d7dc;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
 main > .blurred-content {
     position: relative;
     margin-top: calc(100vh - 150px); /* Starts 150px above the bottom of the viewport */
     border-radius: 12px; /* Slight rounding of corners */
     background-color: rgba(44, 45, 48, 0.8); /* Example background color */
-    padding: 20px;
+    padding: 0rem;
     box-sizing: border-box;
     backdrop-filter: saturate(180%) blur(50px);
     -webkit-backdrop-filter: saturate(180%) blur(50px);
@@ -382,7 +429,15 @@ footer {
     /* Dynamic blur effect */
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    
+
+    @media only screen and (max-width: 768px) {
+    border-radius: 0px;
+
+        height: 30px; /* Smaller font size for mobile */
+        margin-top: 45rem;
+        padding: 2rem 0;
+
+    }
 }
 
 .footer-container {
@@ -393,7 +448,9 @@ footer {
     text-align: center;
 
     @media only screen and (max-width: 768px) {
-        height: 10px; /* Smaller font size for mobile */
+        height: 0px; /* Smaller font size for mobile */
+        padding: 0 2rem 0 2rem;
+
     }
 }
 
@@ -403,7 +460,7 @@ footer p {
     margin: 0;
 
     @media only screen and (max-width: 768px) {
-        font-size: 0.8rem; /* Smaller font size for mobile */
+        font-size: 0.6rem; /* Smaller font size for mobile */
     }
 
 }
