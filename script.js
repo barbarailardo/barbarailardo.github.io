@@ -4,31 +4,7 @@ console.log("Welcome to ADHDologia!");
 // Device detection variable
 const isMobile = window.innerWidth <= 768;
 const marginAmount = isMobile ? 0 : 200;
-console.log("marginAmount is: ", marginAmount);
 
-/* document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    const servicesSection = document.querySelector("#services"); // Select the services section specifically
-
-    // Function to adjust section heights
-    const setSectionHeights = () => {
-        const viewportHeight = window.innerHeight;
-        sections.forEach(section => {
-            if (section === servicesSection || section.querySelector('.blurred-content')) {
-                section.style.height = "auto"; // Let height adjust to content
-            } else {
-                section.style.height = `${viewportHeight}px`; // Set to viewport height
-            }
-        });
-    };
-
-    // Set initial section heights
-    setSectionHeights();
-
-    // Adjust section heights on window resize
-    window.addEventListener("resize", setSectionHeights);
-});
- */
 // Function to handle scroll-based blur effect for "about-content"
 document.addEventListener("DOMContentLoaded", () => {
     /* const sections = document.querySelectorAll("section .about-content"); */

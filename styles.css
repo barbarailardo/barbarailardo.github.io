@@ -9,10 +9,10 @@ body {
     font-family: 'Fraunces', Helvetica, Arial, sans-serif;
     letter-spacing: 1px; /* Adjust the value as needed */
     line-height: 1.8;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     /* background-color: #2c2f33; */
     color: #d1cdcd;
-    padding: 3rem;
+    padding: 80px;
     background-image: url('assets/images/ADHDologia_stage_by_Kamil_Nawirski.png');
     background-size: cover;
     background-position: center;
@@ -123,6 +123,7 @@ section {
     /* height: 100vh; */
     height: auto;
     position: relative;
+    padding-top: 100px;
     justify-content: center; /* Center content horizontally */
     overflow: hidden; /* Prevent scrollbars if content exceeds height */
 }
@@ -145,9 +146,16 @@ section {
 }
 
 section h2 {
-    margin: 20 auto 0 0; /* Remove default margins */
+    margin: 50 auto 0 0; /* Remove default margins */
     padding-bottom: 20px; /* Add some spacing below the title */
     line-height: 1.2; /* Adjust line spacing to make the title more compact */
+
+}
+
+section p {
+    font-size: 3rem;
+    text-align: left;
+    
 }
 
 
@@ -168,18 +176,18 @@ section h2 {
 }
 
 
-
 .about-content {
     flex: 1; /* Allow content to take available space */
     height: auto;
     background-color: transparent;
     position: relative;
-    padding: 0 0 150px 0;
+    padding: 0 0 4rem 0;
+    margin-bottom: 3rem;
 }
 
 .about-content > div {
     background-color: transparent;
-    height: 150px;
+    height: 200px;
     @media screen and (max-width: 768px) {
         height: 130px; /* Slightly smaller for mobile */
     }
@@ -193,6 +201,7 @@ section h2 {
     max-width: 100%;
     height: auto;
     z-index: 1;
+    filter: drop-shadow(-0px 0px 50px #8364ff);
 }
 
 /* Adjustments for smaller screens */
@@ -211,11 +220,38 @@ h2 {
     font-weight: bolder;
     letter-spacing: 1px; /* Adjust the value as needed */
     line-height: 1.5;
-    font-size: 3rem;
+    font-size: 5rem;
     color: #8364ff;
-    filter: drop-shadow(-0px 0px 3px rgb(68, 55, 55));;
+    filter: drop-shadow(-0px 0px 3px rgb(46, 37, 37));
 }
 
+.animate-character
+{
+  background-image: linear-gradient(
+    -230deg,
+    #ff4213 0%,
+    #44107a 15%,
+    #220a75 60%,
+    #ff4213 100%
+
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #8364ff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s reverse infinite;
+  display: inline-block;
+      font-size: 80px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 /* Subtitle */
 .subtitle {
     font-size: 24px; /* Adjust the size as needed */
@@ -421,4 +457,80 @@ footer p {
     #mobile-message {
         display: block !important;
     }
+}
+
+
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #ff4213;
+    animation: move-the-circle 2s infinite;
+    transform-origin: center center;
+}
+
+.circle:nth-child(1) {
+    left: 0px;
+    animation-delay: 0.1s;
+}
+
+.circle:nth-child(2) {
+    left: 30px;
+    animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+    left: 60px;
+    animation-delay: 0.3s;
+}
+
+.circle:nth-child(4) {
+    left: 90px;
+    animation-delay: 0.4s;
+}
+
+.circle:nth-child(5) {
+    left: 120px;
+    animation-delay: 0.5s;
+}
+
+.circle:nth-child(6) {
+    left: 150px;
+    animation-delay: 0.6s;
+}
+
+.circle:nth-child(7) {
+    left: 180px;
+    animation-delay: 0.7s;
+}
+
+.circle:nth-child(8) {
+    left: 210px;
+    animation-delay: 0.8s;
+}
+
+@keyframes move-the-circle {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        background-color: #ff4213;
+    }
+    50% {
+        transform: translate(0, 50px) scale(0.4);
+        opacity: 0.5;
+        background-color: rgb(215, 13, 255);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        background-color: ff4213;
+    }
+}
+
+.animation-wrapper {
+    position: relative;
+    width: 240px; /* Total width to fit 8 circles spaced 30px apart */
+    height: 100px; /* Adjust based on your layout */
+    margin: 0 auto; /* Center the animation wrapper */
 }
