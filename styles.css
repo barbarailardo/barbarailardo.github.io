@@ -94,7 +94,6 @@ body {
     height: auto;
 
     /* Center the logo horizontally if it was centered before */
-    display: block; 
     margin: 20 auto 5;
 
     /* Default size matching the original text */
