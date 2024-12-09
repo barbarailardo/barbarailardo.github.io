@@ -24,6 +24,8 @@ body {
     body {
         font-size: 1.1rem; /* Smaller font size for mobile */
         padding: 0rem; /* Adjust padding for mobile */
+        padding-right: 0;
+        margin-right: 0;
     }
 
     header .title {
@@ -114,6 +116,12 @@ main > .blurred-content {
     -webkit-backdrop-filter: saturate(180%) blur(50px);
     border: 1.5px solid rgba(255, 255, 255, 0.2); /* Optional for styling */
     overflow: visible;
+
+    /* Adjust size on smaller screens */
+    @media screen and (max-width: 768px) {
+        padding-right: 0;
+        margin-right: 0;
+    }        
 }
 
 section {
@@ -193,6 +201,8 @@ section h2 {
     max-width: 100%;
     height: auto;
     z-index: 1;
+    filter: drop-shadow(-0px 0px 5px #8c16fc);;
+
 }
 
 /* Adjustments for smaller screens */
@@ -211,9 +221,13 @@ h2 {
     font-weight: bolder;
     letter-spacing: 1px; /* Adjust the value as needed */
     line-height: 1.5;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #8364ff;
-    filter: drop-shadow(-0px 0px 3px rgb(68, 55, 55));;
+    filter: drop-shadow(-0px 0px 3px rgb(68, 55, 55));
+    filter: text-shadow(-0px 0px 1px #ffffff);
+    /* box-shadow: inset gray 0px 0px 60px -12px; */ 
+
+
 }
 
 /* Subtitle */
