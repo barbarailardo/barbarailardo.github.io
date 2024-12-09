@@ -46,6 +46,23 @@ body {
     /* Add more mobile-specific styles as needed */
 }
 
+.logo {
+    /* Ensures the logo scales proportionally */
+    max-width: 100%; 
+    height: auto;
+
+    /* Center the logo horizontally if it was centered before */
+    display: block; 
+    margin: 20 auto 5;
+
+    /* Default size matching the original text */
+    width: 300px; /* Adjust this value to match your desired size */
+
+    /* Adjust size on smaller screens */
+    @media screen and (max-width: 768px) {
+        width: 220px; /* Slightly smaller for mobile */
+    }
+}
 
 /* Content Wrapper */
 .content-wrapper {
@@ -80,14 +97,6 @@ header {
     margin-top: 20px;
     line-height: 1;
 }
-/* 
-header h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #f0eeee;
-    margin-top: 20px;
-    line-height: 1;
-} */
 
 header p {
     font-size: 1.2rem;
@@ -95,6 +104,8 @@ header p {
 }
 
 main > .blurred-content {
+    position: relative;
+    margin-top: calc(100vh - 150px); /* Starts 150px above the bottom of the viewport */
     border-radius: 12px; /* Slight rounding of corners */
     background-color: rgba(44, 45, 48, 0.8); /* Example background color */
     padding: 20px;
@@ -102,39 +113,38 @@ main > .blurred-content {
     backdrop-filter: saturate(180%) blur(50px);
     -webkit-backdrop-filter: saturate(180%) blur(50px);
     border: 1.5px solid rgba(255, 255, 255, 0.2); /* Optional for styling */
+    overflow: visible;
 }
 
 section {
     display: grid;
     place-items: center;
     text-align: center;
-    height: 100vh;
+    /* height: 100vh; */
+    /* height: auto; */
     position: relative;
-   /*  align-items: center; */ /* Center content vertically */
     justify-content: center; /* Center content horizontally */
     overflow: hidden; /* Prevent scrollbars if content exceeds height */
 }
 
 section h2 {
-    margin: 0; /* Remove default margins */
-    padding-bottom: 10px; /* Add some spacing below the title */
+    margin: 20 auto 0 0; /* Remove default margins */
+    padding-bottom: 20px; /* Add some spacing below the title */
     line-height: 1.2; /* Adjust line spacing to make the title more compact */
 }
 
-
-/* Placeholder for background image offset */
-.placeholder {
-    height: 800px; /* Matches the visible part of the background image */
-    background-color: transparent; /* No color */
-}
 
 /* About Section */
 #about {
     background-color: transparent; /* Matches the overall page background color */
     border-radius: 10px;
     text-align: center;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
+    margin: 0 auto 0;
+    overflow: visible;
+    position: relative;
 }
+
 
 .about-flex-container {
     justify-content: space-between;
@@ -144,6 +154,7 @@ section h2 {
     margin: 0 auto;
     padding: 2rem;
     margin-top: 0;
+    position: fixed;
 }
 
 .about-content {
@@ -151,7 +162,37 @@ section h2 {
     filter: blur(10px);
     transition: filter 0.5s ease-out;
     background-color: transparent; /* Ensures background color matches the page */
+    position: relative;
 }
+
+.about-content > div {
+    background-color: transparent;
+    height: 80px;
+    @media screen and (max-width: 768px) {
+        height: 180px; /* Slightly smaller for mobile */
+    }
+}
+
+.about-content img {
+    position: absolute; /* Ensure the image stays fixed */
+    top: -80%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for true centering */
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .about-content img {
+        top: -20%; /* Adjusts for mobile screens */
+        left: 50%; /* Centers the image */
+        transform: translateX(-50%); /* Centers the image */
+    }
+}
+
+
 
 /* Placeholder Section */
 #placeholder-section {
@@ -169,15 +210,16 @@ h2 {
     line-height: 1.5;
     font-size: 3rem;
     color: #8364ff;
+    filter: drop-shadow(-0px 0px 3px rgb(68, 55, 55));;
 }
 
 /* Subtitle */
 .subtitle {
-    font-size: 26px; /* Adjust the size as needed */
+    font-size: 24px; /* Adjust the size as needed */
     font-weight: 300; /* Optional: makes the subtitle bold */
     color: #ffffff; /* Adjust the color to your preference */
     text-align: center; /* Center-aligns the subtitle */
-    margin: 10px 0; /* Adds space around the subtitle */
+    margin: 0 0; /* Adds space around the subtitle */
 }
 
 /* Services Section */
@@ -204,17 +246,6 @@ h2 {
 }
 
 /* Service Cards */
-/* .service-card {
-    background-color: #42454a;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    position: relative;
-    transition: transform 0.2s, box-shadow 0.2s;
-} */
-
 .service-card {
     background-color: #42454a;
     border-radius: 8px;
@@ -343,11 +374,20 @@ footer {
     align-items: center;
     height: 40px;
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+        height: 10px; /* Smaller font size for mobile */
+    }
 }
 
 footer p {
     color: #d1cdcd; /* Keeps the text color consistent with the page theme */
     font-size: 1.2rem;
     margin: 0;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 0.8rem; /* Smaller font size for mobile */
+    }
+
 }
 
