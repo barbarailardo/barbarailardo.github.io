@@ -13,7 +13,7 @@ body {
     /* background-color: #2c2f33; */
     color: #d1cdcd;
     padding: 3rem;
-    background-image: url('assets/images/women_in_tech1.jpg');
+    background-image: url('assets/images/ADHDologia_stage_by_Kamil_Nawirski.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -23,7 +23,7 @@ body {
 @media only screen and (max-width: 768px) {
     body {
         font-size: 1.1rem; /* Smaller font size for mobile */
-        padding: 2rem; /* Adjust padding for mobile */
+        padding: 0rem; /* Adjust padding for mobile */
     }
 
     header .title {
@@ -118,7 +118,7 @@ main > .blurred-content {
 
 section {
     display: grid;
-    place-items: center;
+    place-items: center ;
     text-align: center;
     /* height: 100vh; */
     /* height: auto; */
@@ -137,17 +137,16 @@ section h2 {
 /* About Section */
 #about {
     background-color: transparent; /* Matches the overall page background color */
-    border-radius: 10px;
     text-align: center;
     /* margin-bottom: 3rem; */
-    margin: 0 auto 0;
+    margin: 0 0 0 0;
     overflow: visible;
     position: relative;
 }
 
 
 .about-flex-container {
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     gap: 20px;
     max-width: 1200px;
@@ -186,7 +185,7 @@ section h2 {
 /* Adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
     .about-content img {
-        top: -20%; /* Adjusts for mobile screens */
+        top: -70%; /* Adjusts for mobile screens */
         left: 50%; /* Centers the image */
         transform: translateX(-50%); /* Centers the image */
     }
