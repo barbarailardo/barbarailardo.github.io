@@ -9,7 +9,7 @@ body {
     font-family: 'Fraunces', Helvetica, Arial, sans-serif;
     letter-spacing: 1px; /* Adjust the value as needed */
     line-height: 1.8;
-    font-size: 1.5rem;
+    font-size: 5rem;
     /* background-color: #2c2f33; */
     color: #d1cdcd;
     padding: 80px;
@@ -103,6 +103,7 @@ header p {
     color: #d4d7dc;
 }
 
+
 main > .blurred-content {
     position: relative;
     margin-top: calc(100vh - 150px); /* Starts 150px above the bottom of the viewport */
@@ -141,8 +142,18 @@ section {
     position: relative;
     overflow: visible;
     height: auto;  
+}
+
+.blurry {
     filter: blur(20px);
     transition: filter 0.5s ease;
+}
+
+.row-container-a {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto;
+    padding: 10px;
 }
 
 section h2 {
@@ -155,6 +166,7 @@ section h2 {
 section p {
     font-size: 3rem;
     text-align: left;
+    margin: 300px 0;
     
 }
 
@@ -193,25 +205,43 @@ section p {
     }
 }
 
-.about-content img {
+#barb-avatar {
     position: absolute; /* Ensure the image stays fixed */
-    top: -20%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for true centering */
+    top: -20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     max-width: 100%;
     height: auto;
     z-index: 1;
     filter: drop-shadow(-0px 0px 50px #8364ff);
-}
 
-/* Adjustments for smaller screens */
-@media only screen and (max-width: 768px) {
-    .about-content img {
+    /* Adjustments for smaller screens */
+    @media only screen and (max-width: 768px) {
+        
         top: -50%; /* Adjusts for mobile screens */
         left: 50%; /* Centers the image */
         transform: translateX(-50%); /* Centers the image */
+    
     }
 }
+
+#barb-lab {
+    position: absolute; /* Ensure the image stays fixed */
+    left: 85%;
+    top: 80%;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    filter: drop-shadow(-0px 0px 50px #8364ff);
+    transform: scaleX(-1);
+    /* Adjustments for smaller screens */
+/*     @media only screen and (max-width: 768px) {
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+    } */
+}
+
 
 
 /* Headings */
@@ -225,7 +255,7 @@ h2 {
     filter: drop-shadow(-0px 0px 3px rgb(46, 37, 37));
 }
 
-.animate-character
+.animate-h2
 {
   background-image: linear-gradient(
     -230deg,
@@ -242,7 +272,35 @@ h2 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 5s reverse infinite;
+  animation: textclip 4s cubic-bezier(0.1, 1, 0.9, 0) reverse infinite;
+  display: inline-block;
+      font-size: 80px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.animate-body
+{
+  background-image: linear-gradient(
+    -230deg,
+    #ff4213 0%,
+    #44107a 15%,
+    #220a75 60%,
+    #ff4213 100%
+
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #8364ff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s cubic-bezier(0.2, 1, 0.6, 0 ) reverse infinite;
   display: inline-block;
       font-size: 80px;
 }

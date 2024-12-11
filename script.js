@@ -7,8 +7,7 @@ const marginAmount = isMobile ? 0 : 200;
 
 // Function to handle scroll-based blur effect for "about-content"
 document.addEventListener("DOMContentLoaded", () => {
-    /* const sections = document.querySelectorAll("section .about-content"); */
-    const flexContainers = document.querySelectorAll("section .flex-container");
+    const flexContainers = document.querySelectorAll("section .blurry");
     const handleScroll = () => {
 
         const viewportHeight = window.innerHeight - marginAmount;
@@ -29,8 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 blurAmount = 10 * (1 - visibilityRatio / 0.7);
             }
 
-            // Apply the blur effect
-            content.style.filter = `blur(${Math.max(0, blurAmount)}px)`;
+
+            // Append the blur effect
+            const currentFilter = getComputedStyle(content).filter || "none"; // Get current filter
+            const updatedFilter = currentFilter.replace(/blur\([^\)]+\)/, "").trim(); // Remove existing blur
+            content.style.filter = `${updatedFilter} blur(${Math.max(0, blurAmount)}px)`.trim();
         });
     };
 
