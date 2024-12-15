@@ -103,14 +103,10 @@
         },
       });
 
-<<<<<<< HEAD
 
 
       headerSticky();
       setActiveLink();
-=======
-      headerSticky();
->>>>>>> fb3596b238a066c44adc4ee12b487208812f80c2
 
     }); // End of a document ready
 
