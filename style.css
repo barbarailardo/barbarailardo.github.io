@@ -30,6 +30,7 @@ This is main CSS file that contains custom style rules used in this template
         --bs-heading-color: #F38252;
         --bs-secondary-bg: #f6f6f6;
         --bs-secondary-bg-rgb: 246, 246, 246;
+        --tertiary-bg: #9955e6;
         --bs-primary-bg-subtle: #F6F1ED;
         --bs-link-color: var(--bs-heading-color);
         --bs-link-color-rgb: var(--bs-heading-color);
@@ -38,6 +39,12 @@ This is main CSS file that contains custom style rules used in this template
         --swiper-theme-color: var(--bs-primary) !important;
         --swiper-pagination-color: var(--bs-primary) !important;
 }
+
+.tertiary-bg {
+   background-color: var(--tertiary-bg);
+   color: var(--bs-secondary-bg); 
+}
+
 
 body {
    font-family: var(--body-font);
@@ -227,3 +234,56 @@ h6 {
    filter: drop-shadow(6px 6px 12px rgba(247, 30, 22, 0.6));
    -webkit-filter: drop-shadow(6px 6px 12px rgba(247, 30, 22, 0.6)); 
 }
+
+
+
+/* ANIMATIONS */
+.animate-character
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #f38252 0%,
+    #8b43ff 29%,
+    #fa538b 67%,
+    #f38252 100%
+  );
+
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite reverse;
+/*   display: inline-block;
+      font-size: 190px; */
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+/* .content p {
+   display: inline;
+   background-repeat: no-repeat;
+   transition: all 500ms ease-in-out;
+ }
+ */
+.v3 p {
+   display: inline;
+   background-repeat: no-repeat;
+   transition: all 500ms ease-in-out;
+   color: transparent;
+   background-position: right;
+   background-size: 100% 100%;
+   background-image: linear-gradient(#4b4545, #4b4545);
+ }
+ .v3:hover p {
+   color: #2a2935;
+   background-size: 0% 100%;
+ }
