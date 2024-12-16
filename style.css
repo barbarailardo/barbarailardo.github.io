@@ -28,10 +28,10 @@ This is main CSS file that contains custom style rules used in this template
         --body-color: #515151;
         /* --bs-heading-color: #333636; */
         --bs-heading-color: #F38252;
-        --bs-secondary-bg: #f6f6f6;
-        --bs-secondary-bg-rgb: 246, 246, 246;
-        --tertiary-bg: #9955e6;
-        --bs-primary-bg-subtle: #F6F1ED;
+        --bs-secondary-bg: #d3d1d1;
+        --bs-secondary-bg-rgb: 211, 209, 209;
+        --tertiary-bg: #4a2c6d;
+        --bs-primary-bg-subtle: #dad7d6;
         --bs-link-color: var(--bs-heading-color);
         --bs-link-color-rgb: var(--bs-heading-color);
         --bs-link-hover-color: var(--bs-primary);
@@ -54,10 +54,6 @@ body {
 
 }
 
-purple {
-   color: var(--bs-secondary);
-}
-
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
    text-transform: capitalize;
 }
@@ -68,7 +64,7 @@ h1 {
    font-family: 'Space Mono', monospace;
 
    @media only screen and (max-width: 768px) {
-      font-size: 2rem; /* Smaller font size for mobile */
+      font-size: 3.5rem; /* Smaller font size for mobile */
    }
   
 }
@@ -236,6 +232,12 @@ h6 {
 }
 
 
+.custom-drop-shadow-black {
+   filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.5));
+   -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.5)); 
+}
+
+
 
 /* ANIMATIONS */
 .animate-character
@@ -274,7 +276,7 @@ h6 {
    transition: all 500ms ease-in-out;
  }
  */
-.v3 p {
+/* .v3 p {
    display: inline;
    background-repeat: no-repeat;
    transition: all 500ms ease-in-out;
@@ -286,4 +288,4 @@ h6 {
  .v3:hover p {
    color: #2a2935;
    background-size: 0% 100%;
- }
+ } */
