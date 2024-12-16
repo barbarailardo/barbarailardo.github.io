@@ -47,6 +47,10 @@ body {
 
 }
 
+purple {
+   color: var(--bs-secondary);
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
    text-transform: capitalize;
 }
@@ -69,7 +73,7 @@ h2 {
 }
 
 h3 {
-   font-size: 22px;
+   font-size: 39px;
    font-weight: 400;
    font-family: var(--body-font);
 }
@@ -186,7 +190,7 @@ h6 {
 }
 
 #home {
-   background: url('images/ADHDologia_stage_by_Kamil_Nawirski.png') no-repeat center center/cover;
+   background: url('assets/images/ADHDologia_stage_by_Kamil_Nawirski.png') no-repeat center center/cover;
    color: white; /* Adjust text color for visibility */
    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8); /* Optional: Improves text visibility */
    position: relative;
@@ -217,4 +221,9 @@ h6 {
 #home .container {
    position: relative;
    z-index: 2; /* Ensures content is above the dark overlay */
+}
+
+.custom-drop-shadow {
+   filter: drop-shadow(6px 6px 12px rgba(247, 30, 22, 0.6));
+   -webkit-filter: drop-shadow(6px 6px 12px rgba(247, 30, 22, 0.6)); 
 }

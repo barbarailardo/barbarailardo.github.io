@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="format-detection" content="telephone=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
         <meta name="author" content="Barbara Sofia Ilardo">
         <meta name="keywords" content="ADHD, Neurodivergence, Adults, Personal Experiences, Science">
         <meta name="description" content="ADHDologia focuses on neurodivergence in adults, sharing personal experiences and the latest science.">    
@@ -33,7 +33,7 @@
           <nav class="navbar navbar-expand-lg px-lg-5">
             <div class="container-fluid py-3">
               <a class="navbar-brand" href="#logo">
-                <img src="images/ADHDologia_white_logo_transparent.svg" width="250px" alt="ADHDologia Logo">
+                <img src="assets/images/ADHDologia_white_logo_transparent.svg" width="250px" alt="ADHDologia Logo">
               </a>
               <button 
               class="navbar-toggler" 
@@ -70,8 +70,6 @@
             </div>
           </nav>
         </header>
-<!--         I help businesses and individuals understand and embrace neurological diversity through consultations, seminars, workshops and podcasts.</p>
- -->
         <section id="home" class="bg-primary-subtle section-padding pb-5 pb-md-0">
             <div class="container">
               <div class="row g-4 flex-row-reverse align-items-center">
@@ -86,9 +84,11 @@
                   <div class="d-flex align-items-center icon mt-2">
 
                   </div>
-                  <button type="button" class="btn btn-primary btn-lg mt-5 btn-color">
-                    Learn More
-                  </button>                     
+                  <a>
+                    <button type="button" class="btn btn-primary btn-lg mt-5 btn-color">
+                      Learn More
+                    </button>                     
+                  </a>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@
           <div class="container">
              <div class="row align-items-center">
                 <div class="col-md-6 p-0">
-                    <img src="images/diversity2.png" class="img-fluid w-100 h-100 object-fit-cover"
+                    <img src="assets/images/diversity2.png" class="img-fluid w-100 h-100 object-fit-cover"
              alt="About ADHDologia">
 
                 </div>
@@ -145,7 +145,7 @@
                       </button>
               </div>
               <div class="col-md-6 col-md-6 ps-md-5 mt-md-0 mt-4">
-                <img src="images/barb_avatar.png" class="img-fluid" alt="About ADHDologia"  style="filter: drop-shadow(6px 6px 12px rgba(247, 30, 22, 0.4));">
+                <img src="assets/images/barb_avatar.png" class="img-fluid custom-drop-shadow " alt="About ADHDologia">
             </div>
            </div>
           </div>
@@ -153,37 +153,75 @@
 
         <section id="services" class="section-padding bg-body-secondary">
             <div class="container">
-                <div class="text-center mb-5">
-                  <h2>
-                      Services
-                  </h2>
-                  <p>
-                      Empowering neurodivergent adults with tailored resources.
-                  </p>
+              <div class="row">
+                <!-- Left padding div -->
+                <div class="col-md-1"></div>
+                
+                <!-- The text content div with horizontal padding -->
+                <div class="col-md-10 mb-5 text-center">
+                  <h2>Services</h2>
+                    <p>
+                        I help businesses and individuals understand and embrace neurological diversity through consultations, seminars, workshops and podcasts.
+                    </p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-4 text-center">
-                      <img src="images/analytics.png" class="img-fluid" alt="ND Analytics">
-                      <h4 class="mt-4">ND Analytics</h4>
-                      <p>
-                          Understand your unique strengths through analytics tailored for neurodivergent minds.
+                
+                <!-- Right padding div -->
+                <div class="col-md-1"></div>
+            </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 mb-5 mx-5">
+                      <!-- <img src="assets/icons/demographic.png" class="img-fluid w-50" alt="Analytics"> -->
+                      <h3 class="mt-5 text-center">Analytics</h3>
+                      <img src="assets/icons/Analytics2.svg" class="img-fluid custom-drop-shadow" width="500px" alt="Analytics">
+                      <p class="mt-5">
+                        <b>How neurodiverse is your organization?</b>
+                        <br>Understand the particular needs of your team and foster a more neuroaccessible environment.
                       </p>
                     </div>
-                    <div class="col-md-4 text-center">
-                      <img src="images/webinar.png" class="img-fluid" alt="Single Webinar">
-                      <h4 class="mt-4">Single Webinars</h4>
-                      <p>
-                          Join our expert-led webinars to learn practical strategies and insights.
-                      </p>
-                    </div>
-                    <div class="col-md-4 text-center">
-                      <img src="images/series.png" class="img-fluid" alt="Webinar Series">
-                      <h4 class="mt-4">Webinar Series</h4>
-                      <p>
-                          Delve deeper into ADHD topics with a comprehensive webinar series.
+                    <div class="col-lg-5 mb-5 mx-5">
+                      <h3 class="mt-5 text-center">Webinars</h3>
+                      <img src="assets/icons/Webinar2.svg" class="img-fluid custom-drop-shadow" width="500px" alt="Single Webinar">
+                      <p class="mt-5">
+                        <b>Is your team familiar with neurodiversity?</b>
+                        <br>Cultivate awareness through interactive seminars and webinars.
+
                       </p>
                     </div>
                 </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 mb-5 mx-5">
+                      <h3 class="mt-5 text-center">Workshops</h3>
+                      <img src="assets/icons/Workshop2.svg" class="img-fluid custom-drop-shadow" width="500px" alt="Webinar Series">
+                      <p class="mt-5">
+                        <b>Ready to take action?</b>
+                        Engage in hands-on workshops designed to address neurodivergent needs and deliver practical, actionable strategies.                      </p>
+                    </div>
+                    <div class="col-lg-5 mb-5 mx-5">
+                      <h3 class="mt-5 text-center">Accountability Buddy</h3>
+                      <img src="assets/icons/Consultant.svg" class="img-fluid custom-drop-shadow" width="500px" alt="Webinar Series">
+                      <p class="mt-5">
+                        <b>Having a hard time adulting?</b>
+                          No worries - let's look into it together. I can help you face your "wall of awful": everyday tasks, bills and boring paperwork don't stand a chance!
+                      </p>
+                    </div>
+                    <div class="col-lg-5 mb-5 mx-5">
+                      <h3 class="mt-5 text-center">Public Speaking</h3>
+                      <img src="assets/icons/Podcast2.svg" class="img-fluid custom-drop-shadow" width="500px" alt="Webinar Series">
+                      <p class="mt-5">
+                        <b>Need a neurodivergent speaker for your podcast, video or event?</b>
+                          Let's collaborate!
+                      </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="justify-content-center">
+              <a href="#contact">
+                <button type="button" class="btn btn-primary btn-lg mt-5 btn-color">
+                  Let's get in touch!
+                </button>
+              </a>
             </div>
         </section>
 
@@ -199,15 +237,15 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-md-4">
-                        <img src="images/podcast-1.png" class="img-fluid" alt="Podcast Episode 1">
+                        <img src="assets/images/podcast-1.png" class="img-fluid" alt="Podcast Episode 1">
                         <h5 class="mt-3">Understanding ADHD</h5>
                     </div>
                     <div class="col-md-4">
-                        <img src="images/podcast-2.png" class="img-fluid" alt="Podcast Episode 2">
+                        <img src="assets/images/podcast-2.png" class="img-fluid" alt="Podcast Episode 2">
                         <h5 class="mt-3">ADHD and Daily Life</h5>
                     </div>
                     <div class="col-md-4">
-                        <img src="images/podcast-3.png" class="img-fluid" alt="Podcast Episode 3">
+                        <img src="assets/images/podcast-3.png" class="img-fluid" alt="Podcast Episode 3">
                         <h5 class="mt-3">Community Stories</h5>
                     </div>
                 </div>
@@ -301,7 +339,7 @@
               <div class="swiper gallery-swiper"> 
                 <div class="swiper-wrapper">
                     <div class="gallery-image py-2 px-1 swiper-slide">
-                      <img src="images/gallery1.jpg" class="img-fluid rounded-3">
+                      <img src="assets/images/gallery1.jpg" class="img-fluid rounded-3">
                     </div>
 
                 </div>
@@ -310,30 +348,6 @@
           </div>
         </section>
 
-
-<!--       <section id="contact" class="section-padding bg-primary-subtle">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2>Let's get in touch!</h2>
-          </div>
-          <form action="" method="POST" class="contact-form">
-            <div class="form-group">
-              <label for="full-name">Full Name</label>
-              <input type="text" id="full-name" name="full-name" placeholder="Your Full Name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="Your E-mail" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
-            </div>
-          <button type="submit" class="btn btn-primary btn-lg mt-5 btn-color">
-            Send message
-          </button>   
-          </form>
-        </div> -->
 
         <section id="contact" class="section-padding bg-primary-subtle">
           <div class="container">
@@ -374,7 +388,7 @@
                     Ready to Take Step Towards a Healthier You?
                 </h2>
                 <p>
-                    Transform your life, achieve your weight loss goals, and embrace a happier, healthier version of yourself. Don't wait any longer your journey to a better you starts today!
+                    Transform your life, achieve your goals, and embrace a happier, healthier version of yourself. Don't wait any longer - your journey to a better you starts today!
                 </p>
                 <button type="button" class="btn btn-primary btn-lg mt-4">
                     Order Now
@@ -386,7 +400,7 @@
         <hr class="m-0">
         <div class="footer-bottom container-fluid text-center bg-primary-subtle">
           <div class="copyright py-4">
-            <p class="mb-0">© Copyright 2024 WeightLoss. HTML Template by <a href="https://templatesjungle.com/" target="_blank">TemplatesJungle</a>
+            <p class="mb-0">© Copyright 2024 ADHDologia.
             </p>
           </div>
         </div>
