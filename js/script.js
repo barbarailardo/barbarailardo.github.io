@@ -114,37 +114,11 @@
 
 
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-
-const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.post('/send-message', (req, res) => {
-  const { 'full-name': fullName, email, message } = req.body;
-
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'adhdologia@gmail.com',
-      pass: 'your-email-password'
-    }
-  });
-
-  const mailOptions = {
-    from: email,
-    to: 'adhdologia@gmail.com',
-    subject: `New message from ${fullName}`,
-    text: message
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      return res.status(500).send('Error sending email.');
-    }
-    res.send('Message sent successfully!');
-  });
-});
-
-app.listen(3000, () => console.log('Server running on port 3000'));
+function downloadCV() {
+  const link = document.createElement('a');
+  link.href = 'documents/WEBSITE_BARBARA_SOFIA_ILARDO_CV_2024_ENG.pdf';
+  link.download = 'Barbara_Sofia_Ilardo_ADHDologia_resume.pdf';
+  document.body.appendChild(link); // Append link to the body
+  link.click(); // Trigger download
+  document.body.removeChild(link); // Clean up after the download
+}
