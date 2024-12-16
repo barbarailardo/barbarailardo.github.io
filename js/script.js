@@ -116,7 +116,7 @@
 
 function downloadCV() {
   const link = document.createElement('a');
-  link.href = 'documents/WEBSITE_BARBARA_SOFIA_ILARDO_CV_2024_ENG.pdf';
+  link.href = 'assets/documents/WEBSITE_BARBARA_SOFIA_ILARDO_CV_2024_ENG.pdf';
   link.download = 'Barbara_Sofia_Ilardo_ADHDologia_resume.pdf';
   document.body.appendChild(link); // Append link to the body
   link.click(); // Trigger download
