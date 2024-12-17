@@ -112,6 +112,28 @@
 
 })(jQuery);
 
+/* 
+document.addEventListener("DOMContentLoaded", function () {
+  function addMobileClass() {
+      const sections = document.querySelectorAll("section .container");
+      if (window.innerWidth <= 768) { // Check for mobile screen width
+          sections.forEach(section => {
+              section.classList.add("mx-3");
+          });
+      } else {
+          sections.forEach(section => {
+              section.classList.remove("mx-3"); // Remove class if not mobile
+          });
+      }
+  }
+
+  // Run on page load
+  addMobileClass();
+
+  // Run on window resize
+  window.addEventListener("resize", addMobileClass);
+});
+ */
 
 
 function downloadCV() {
