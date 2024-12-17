@@ -28,8 +28,9 @@ This is main CSS file that contains custom style rules used in this template
         --body-color: #515151;
         /* --bs-heading-color: #333636; */
         --bs-heading-color: #F38252;
-        --bs-secondary-bg: #d3d1d1;
-        --bs-secondary-bg-rgb: 211, 209, 209;
+        --secondary-body: #d3d1d1;
+/*         --bs-secondary-bg: #d3d1d1;
+        --bs-secondary-bg-rgb: 211, 209, 209; */
         --tertiary-bg: #4a2c6d;
         --bs-primary-bg-subtle: #dad7d6;
         --bs-link-color: var(--bs-heading-color);
@@ -43,7 +44,7 @@ This is main CSS file that contains custom style rules used in this template
 .tertiary-bg {
    /* background-color: var(--tertiary-bg); */
    background: linear-gradient(180deg, #4a2c6d, #693388) !important;
-   color: var(--bs-secondary-bg); 
+   color: var(--secondary-body); 
 }
 
 
