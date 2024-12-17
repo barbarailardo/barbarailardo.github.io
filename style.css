@@ -251,7 +251,98 @@ h6 {
 }
 
 
+/* REVIEWS */
+
+
+/* Swiper Container Styling */
+
+
+/* Ensure the swiper container and wrapper take up the full width and height */
+.swiper {
+   width: 100%;
+   height: 100%;
+ }
+ 
+ /* Set the swiper slides to be center-aligned with space between */
+ .swiper-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: nowrap;
+ }
+ 
+ /* Each testimonial card styling */
+ .testimonial-card {
+   width: 100%;
+   max-width: 400px; /* Max width for each card */
+   margin: 0 15px; /* Space between cards */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Styling for reviewer photo */
+ .reviewer-photo {
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 10px;
+ }
+ 
+ /* Styling for testimonial text */
+ .testimonial-text {
+   font-size: 16px;
+   line-height: 1.5;
+   margin: 20px 0;
+ }
+ 
+ /* Styling for additional submitted photo */
+ .testimonial-photo {
+   width: 100%;
+   height: auto;
+   border-radius: 8px;
+ }
+ 
+ /* Swiper Pagination */
+ .swiper-pagination {
+   position: absolute;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+ 
+ /* Responsive behavior */
+ @media (max-width: 800px) {
+   .testimonial-card {
+     max-width: 80%; /* Adjust card width on smaller screens */
+   }
+ }
+ 
+ @media (max-width: 500px) {
+   .testimonial-card {
+     max-width: 90%; /* Adjust card width even more on mobile */
+   }
+ }
+
+
+
+
+ /* Ensure the swiper-wrapper takes full width */
+.testimonial-swiper .swiper-wrapper {
+   display: flex;
+   justify-content: center; /* Ensure items are centered */
+ }
+ 
+
+
 /* ANIMATIONS */
+
 .animate-character
 {
    text-transform: uppercase;
@@ -283,7 +374,7 @@ h6 {
 
 
 
-.v3 p {
+ .v3 p {
    display: inline;
    background-repeat: no-repeat;
    transition: all 500ms ease-in-out;
@@ -296,6 +387,7 @@ h6 {
    color: #2a2935;
    background-size: 0% 100%;
  }
+
 
 
  .podcast-item {

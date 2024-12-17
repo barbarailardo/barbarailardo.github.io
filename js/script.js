@@ -50,38 +50,29 @@
 
     $(document).ready(function() {
       
-      /* Video */
-      var $videoSrc;  
-        $('.play-btn').click(function() {
-          $videoSrc = $(this).data( "src" );
-        });
-  
-        $('#myModal').on('shown.bs.modal', function (e) {
-  
-        $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
-      })
-  
-      $('#myModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src',$videoSrc); 
-      })
-
+ 
       var testimonialSwiper = new Swiper(".testimonial-swiper", {
-        spaceBetween: 20,
+        slidesPerView: 1, // Default for mobile
+        spaceBetween: 30, // Space between slides
+        centeredSlides: true, // Keep slides centered
         pagination: {
-            el: ".testimonial-swiper-pagination",
-            clickable: true,
-          },
+          el: ".testimonial-swiper-pagination",
+          clickable: true, // Allow pagination interaction
+        },
         breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
           800: {
-            slidesPerView: 2,
+            slidesPerView: 1, // Display 1 card on small screens
           },
           1400: {
-            slidesPerView: 4,
-          }
+            slidesPerView: 2, // Display 2 cards on large screens
+          },
+
         },
+      });
+    
+      // Force Swiper to update on window resize
+      $(window).on('resize', function() {
+        testimonialSwiper.update();
       });
       
       var gallerySwiper = new Swiper(".gallery-swiper", {
@@ -111,6 +102,18 @@
     }); // End of a document ready
 
 })(jQuery);
+
+
+/* var swiper = new Swiper('.testimonial-swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 30, // Space between cards
+  centeredSlides: true, // Center the active slide
+  loop: true, // Optional: Make it loop infinitely
+  pagination: {
+    el: '.testimonial-swiper-pagination',
+    clickable: true,
+  },
+}); */
 
 /* 
 document.addEventListener("DOMContentLoaded", function () {
@@ -144,3 +147,4 @@ function downloadCV() {
   link.click(); // Trigger download
   document.body.removeChild(link); // Clean up after the download
 }
+
