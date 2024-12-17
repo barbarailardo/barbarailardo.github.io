@@ -52,22 +52,27 @@
       
  
       var testimonialSwiper = new Swiper(".testimonial-swiper", {
-        slidesPerView: 1, // Default for mobile
+        slidesPerView: 'auto',
         spaceBetween: 30, // Space between slides
         centeredSlides: true, // Keep slides centered
+
         pagination: {
           el: ".testimonial-swiper-pagination",
           clickable: true, // Allow pagination interaction
         },
-        breakpoints: {
-          800: {
+/*         breakpoints: {
+          
+          0: {
             slidesPerView: 1, // Display 1 card on small screens
           },
-          1400: {
-            slidesPerView: 2, // Display 2 cards on large screens
+          800: {
+            slidesPerView: 2, // Display 2 card on small screens
+          },
+          1800: {
+            slidesPerView: 3, // Display 2 cards on large screens
           },
 
-        },
+        }, */
       });
     
       // Force Swiper to update on window resize
