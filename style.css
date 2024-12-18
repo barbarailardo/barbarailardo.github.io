@@ -508,6 +508,7 @@ h6 {
    padding: 1rem;
    border-radius: 10px;
    max-width: 350px;
+   min-width: 250px;
 }
 
 .media-item img {
