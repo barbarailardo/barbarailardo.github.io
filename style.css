@@ -1,15 +1,3 @@
-/*
-Theme Name: WeightLoss
-Theme URI: https://templatejungle.com/
-Author: TemplatesJungle
-Author URI: https://templatesjungle.com/
-Description: WeightLoss – WeightLoss Landing Page Bootstrap 5 HTML Website Template
-Version: 1.1
-*/
-
-/*--------------------------------------------------------------
-This is main CSS file that contains custom style rules used in this template
---------------------------------------------------------------*/
     
 /*--------------------------------------------------------------
 /** VARIABLES
@@ -124,9 +112,10 @@ h6 {
 }
 
  .container {
-   margin-left: 1 rem;
-   margin-right: 1 rem;
-   
+   margin-left: 2 rem;
+   margin-right: 2 rem;
+   max-width: 80%; 
+
    @media only screen and (max-width: 768px) {
       margin-left: 2 rem;
       margin-right: 2 rem; 
@@ -209,7 +198,7 @@ h6 {
 }
 
 .p {
-   text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.9); /* Optional: Improves text visibility */
+   text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5); /* Optional: Improves text visibility */
    text-align: justify !important;
 }
 
@@ -236,25 +225,24 @@ h6 {
 
 }
 
-
 .custom-drop-shadow-black {
    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.5));
    -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.5)); 
 }
 
 
+
 /* REVIEWS */
-
-
-
 
 /* Testimonial Card Grid */
 .testimonial-card-wrapper {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Grid layout */
-   gap: 4rem; /* Space between cards */
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Grid layout */
+   gap: 5rem; /* Space between cards */
    justify-items: center;
    padding-top: 30px;
+   max-width: 100%; 
+   margin: 0 auto; 
  }
  
  /* Testimonial Card Styles */
@@ -262,7 +250,7 @@ h6 {
    background: #fff;
    border-radius: 12px;
    padding: 20px;
-   max-width: 500px;
+   max-width: 600px;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
    display: flex;
    flex-direction: column;
@@ -300,7 +288,6 @@ h6 {
    color: #777;
  }
  
- /* Quotation marks styling for the review text */
  .testimonial-text {
    position: relative; /* Establish a reference point for pseudo-elements */
    color: #6b6464; /* Subtle text color */
@@ -317,16 +304,18 @@ h6 {
  }
  
  .testimonial-text::before {
-   content: "“"; /* Opening quotation mark */
-   left: -0.4em; /* Adjust horizontal position */
-   top: -0.55em; /* Adjust vertical position */
+   content: "“";
+   left: -0.4em;
+   top: -0.7em;
+   rotate: 15deg;
    filter: drop-shadow( 0px 0px 10px var(--custom-drop-shadow-color));
 }
 
 .testimonial-text::after {
-   content: "”"; /* Closing quotation mark */
-   right: -0.3em; /* Adjust horizontal position */
-   bottom: -0.55em; /* Adjust vertical position */
+   content: "”";
+   right: -0.3em;
+   bottom: -0.8em;
+   rotate: 15deg;
    filter: drop-shadow( 0px 0px 10px var(--custom-drop-shadow-color));
  }
  
