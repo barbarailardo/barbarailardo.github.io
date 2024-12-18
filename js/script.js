@@ -47,9 +47,29 @@ document.addEventListener("DOMContentLoaded", function () {
           });
       });
     };
-      // Initialize all functions
-      headerSticky();
-      setActiveLink();
+
+    const closeNavbarOnClick = function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const navbarCollapse = document.querySelector(".navbar-collapse");
+
+        if (navLinks.length > 0 && navbarCollapse) {
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    if (navbarCollapse.classList.contains("show")) {
+                        const collapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: true,
+                        });
+                        collapse.hide(); // Collapse the menu
+                    }
+                });
+            });
+        }
+    };
+
+    // Initialize all functions
+    headerSticky();
+    setActiveLink();
+    closeNavbarOnClick();
 });
 
 

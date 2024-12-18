@@ -6,6 +6,7 @@
          font-family: "Space Mono", monospace;
          --body-font: "Space Mono", monospace;
          --bs-btn-font-family: "Space Mono", sans-serif;
+
          color-scheme: only light;
 }
 :root {
@@ -138,7 +139,7 @@ h6 {
 /* section padding and margin */
 .section-padding{
    padding-top: 160px;
-   padding-bottom: 160px;
+   padding-bottom: 100px;
 }
 .section-margin{
    margin-top: 160px;
@@ -208,7 +209,7 @@ h6 {
 #home {
    background: url('assets/images/ADHDologia_stage_by_Kamil_Nawirski.png') no-repeat center center/cover;
    color: white; /* Adjust text color for visibility */
-   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8); /* Optional: Improves text visibility */
+   /* text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);  *//* Optional: Improves text visibility */
    position: relative;
    overflow: hidden;
 }
@@ -247,8 +248,8 @@ h6 {
 }
 
 .custom-drop-shadow-black {
-   filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.0));
-   -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.0)); 
+   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.6));
+   -webkit-filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.6)); 
 }
 
 
@@ -441,9 +442,15 @@ h6 {
    justify-content: center;
    align-items: center;
    background-color: rgb(255, 255, 255);
-/*    width: 400px;
- */   margin: 0 30px 30px 30px;
+   width: 400px;
+   margin: 0 30px 30px 30px;
    border-radius: 10px;
+}
+
+.footer-bottom {
+   @media only screen and (max-width: 768px) {
+      font-size: 1rem; 
+   }
 }
 
 
