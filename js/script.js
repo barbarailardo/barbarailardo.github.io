@@ -1,4 +1,4 @@
-(function($) {
+document.addEventListener("DOMContentLoaded", function () {
 
     "use strict";
 
@@ -47,6 +47,9 @@
           });
       });
     };
+      // Initialize all functions
+      headerSticky();
+      setActiveLink();
 });
 
 

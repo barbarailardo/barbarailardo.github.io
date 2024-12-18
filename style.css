@@ -6,6 +6,7 @@
          font-family: "Space Mono", monospace;
          --body-font: "Space Mono", monospace;
          --bs-btn-font-family: "Space Mono", sans-serif;
+         color-scheme: only light;
 }
 :root {
         --bs-primary: #f38252;
@@ -14,11 +15,11 @@
         --bs-secondary-rgb: 139, 67, 255;
         --bs-info-rgb: 13, 202, 240;
         --body-color: #515151;
-        /* --bs-heading-color: #333636; */
+        --bs-heading-color: #333636;
         --bs-heading-color: #F38252;
         --secondary-body: #d3d1d1;
-/*         --bs-secondary-bg: #d3d1d1;
-        --bs-secondary-bg-rgb: 211, 209, 209; */
+        --bs-secondary-bg: #d3d1d1;
+        --bs-secondary-bg-rgb: 211, 209, 209;
         --tertiary-bg: #4a2c6d;
         --bs-primary-bg-subtle: #dad7d6;
         --bs-link-color: var(--bs-heading-color);
@@ -27,6 +28,19 @@
         --bs-link-hover-color-rgb: var(--bs-primary-rgb);
 
         --custom-drop-shadow-color: rgba(247, 30, 22, 0.6);
+
+}
+
+.bg-embracing-neurodiversity {
+   background-color: #fdf0e1 !important;
+}
+
+.bg-white {
+   background: white !important;
+}
+
+.bg-body-secondary {
+    background:var(--bs-secondary-bg-rgb) !important;
 
 }
 
@@ -114,7 +128,6 @@ h6 {
  .container {
    margin-left: 2 rem;
    margin-right: 2 rem;
-   max-width: 80%; 
 
    @media only screen and (max-width: 768px) {
       margin-left: 2 rem;
@@ -166,8 +179,16 @@ h6 {
    z-index: 999999;
    transition: background-color 0.3s ease;
 }
+
+.site-header .nav-link:hover {
+   filter: drop-shadow(0 0 6px rgba(112, 23, 255, 1));
+   color: var(--bs-primary);
+}
 .site-header.sticky{
-   background-color: var(--bs-light);
+   background-color: rgba(245, 241, 241, 0.4);
+   backdrop-filter: blur(20px);
+   border-bottom: 1px solid rgba(212, 212, 212, 0.5);
+
 }
 
 
@@ -177,7 +198,7 @@ h6 {
 }
 
 .site-header.sticky .nav-link.active {
-   color: var(--bs-primary);
+   color: #8b43ff;
 }
 
 .site-header.sticky .nav-link:hover {
@@ -234,15 +255,51 @@ h6 {
 
 /* REVIEWS */
 
+
+
+
+#reviews {
+   background: url('assets/images/ADHDologia_stage_by_Kamil_Nawirski.png') no-repeat center center/cover;
+   background-attachment: fixed;
+
+}
+
+
+
+
+#reviews {
+   background: url('assets/images/ADHDologia_stage_by_Kamil_Nawirski.png') no-repeat center center/cover;
+   background-attachment: fixed;
+   position: relative;
+   overflow: hidden;
+}
+
+#reviews::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.4); /* Adjust opacity for desired darkening */
+   z-index: 1;
+}
+
+#reviews .container {
+   position: relative;
+   max-width: 90%;
+   z-index: 2; /* Ensures content is above the dark overlay */
+}
+
+
 /* Testimonial Card Grid */
 .testimonial-card-wrapper {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Grid layout */
    gap: 5rem; /* Space between cards */
    justify-items: center;
-   padding-top: 30px;
    max-width: 100%; 
-   margin: 0 auto; 
+   margin: 5% auto; 
  }
  
  /* Testimonial Card Styles */
@@ -259,6 +316,8 @@ h6 {
    margin: 0 auto; /* Centers the cards */
    height: fit-content;
    min-height: 350px; /* Ensure a minimum height for cards */
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
  }
  
  /* Testimonial Header: User Info */
@@ -357,6 +416,37 @@ h6 {
  }
 
 
+.form-label {
+   color: var(--bs-primary);
+}
+
+
+#contact {
+   display: flex;
+   flex-wrap: wrap; /* Allows the columns to wrap into rows */
+   justify-content: center; /* Centers the columns horizontally */
+   gap: 30px; /* Adds consistent spacing between columns */
+}
+
+#contact  .col {
+   display: flex; /* Enables flexbox within each column */
+   flex-direction: column; /* Ensures vertical stacking of child elements */
+   min-width: 600px;
+   justify-content: center;
+   align-items: center;
+}
+
+#ig-embed {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(255, 255, 255);
+   width: 600px;
+   margin: 0 30px 30px 30px;
+   border-radius: 10px;
+}
+
+
 /* ANIMATIONS */
 
 .animate-character
@@ -405,14 +495,47 @@ h6 {
  }
 
 
-
- .podcast-item {
+ .media-item {
    transition: transform 0.3s ease, box-shadow 0.3s ease;
    padding: 1rem;
-   border-radius: 7px;
+   border-radius: 10px;
+   max-width: 350px;
 }
 
-.podcast-item:hover {
+.media-item img {
+   border-radius: 6px;
+}
+
+.media-item:hover {
+   transform: translateY(-10px);
+   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.smol-grey{
+   font-size: smaller;
+   color: #8f8f8f;
+}
+
+.square-container {
+   position: relative;
+   width: 100%;
+   padding-top: 100%; /* Creates a square container */
+   overflow: hidden;  /* Ensures the image is cropped to fit the square */
+   border-radius: 10px;  /* Optional: round the corners of the container */
+ }
+ 
+ .square-container img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transform: translate(-50%, -50%); /* Centers the image within the container */
+ }
+
+
+.testimonial-card:hover {
    transform: translateY(-10px);
    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
