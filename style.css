@@ -131,8 +131,8 @@ h6 {
    margin-right: 2 rem;
 
    @media only screen and (max-width: 768px) {
-      margin-left: 2 rem;
-      margin-right: 2 rem; 
+      margin-left: 1 rem;
+      margin-right: 1 rem; 
    }
 }
 
@@ -185,6 +185,7 @@ h6 {
    filter: drop-shadow(0 0 6px rgba(112, 23, 255, 1));
    color: var(--bs-primary);
 }
+
 .site-header.sticky{
    background-color: rgba(245, 241, 241, 0.4);
    backdrop-filter: blur(20px);
