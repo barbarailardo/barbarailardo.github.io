@@ -297,7 +297,7 @@ h6 {
 /* Testimonial Card Grid */
 .testimonial-card-wrapper {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Grid layout */
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid layout */
    gap: 5rem; /* Space between cards */
    justify-items: center;
    max-width: 100%; 
